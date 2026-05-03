@@ -7,7 +7,7 @@ import VideocamOffIcon from "@mui/icons-material/VideocamOff";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/CreateMeeting.module.css";
-
+import server from "../environment";
 export default function CreateMeeting() {
   const navigate = useNavigate();
   const videoRef = useRef(null);
@@ -114,7 +114,7 @@ export default function CreateMeeting() {
 
   const createMeetingInDB = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/meeting/create", {
+      const res = await fetch(`${server.prod}/api/meeting/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

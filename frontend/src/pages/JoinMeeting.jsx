@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/JoinMeeting.module.css";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-
+import server from "../environment";
 export default function JoinMeeting() {
   const [meetingId, setMeetingId] = useState("");
   const [meetingLink, setMeetingLink] = useState("");
@@ -48,7 +48,7 @@ export default function JoinMeeting() {
   if (!code) return alert("Enter Meeting ID or Link");
 
   try {
-    const res = await fetch("http://localhost:8000/api/meeting/join", {
+    const res = await fetch(`${server.prod}/api/meeting/join`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

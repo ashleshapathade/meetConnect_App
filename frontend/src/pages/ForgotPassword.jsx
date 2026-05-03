@@ -1,4 +1,5 @@
 import * as React from "react";
+import server from "../environment";
 import {
   Avatar,
   Button,
@@ -37,7 +38,7 @@ export default function ForgotPassword() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/auth/forgot-password",
+        `${server.prod}/api/auth/forgot-password`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

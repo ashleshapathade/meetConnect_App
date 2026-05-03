@@ -6,7 +6,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
 import {  useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-
+import server from "../environment";
    
 
 export default function ResetPassword() {
@@ -58,7 +58,7 @@ export default function ResetPassword() {
 
     try {
       const res = await fetch(
-        "http://localhost:8000/api/auth/reset-password",
+        `${server.prod}/api/auth/reset-password`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

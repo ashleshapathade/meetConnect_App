@@ -18,7 +18,7 @@ import { AuthContext } from '../contexts/AuthContext';
 import { Snackbar } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import ForgotPassword from './ForgotPassword';    
-
+import server from "../environment";
 
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase";
@@ -129,7 +129,7 @@ export default function Authentication(){
             // console.log("Google User:", user);
 
             // send to backend
-            const response = await fetch("http://localhost:8000/api/auth/google-login", {
+            const response = await fetch(`${server.prod}/api/auth/google-login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
