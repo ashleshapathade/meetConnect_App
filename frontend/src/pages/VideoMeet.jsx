@@ -26,7 +26,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import PanToolIcon from "@mui/icons-material/PanTool";
 
-const server_url = server.dev;
+const server_url = server.prod;
 
 const peerConfigConnections = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],

@@ -1,6 +1,6 @@
 const server ={
     dev:"http://localhost:8000",
-    prod:"https://videocallbackend-8mrh.onrender.com"
+    prod:"https://meetconnect-app-backend.onrender.com"
 }
 
 
@@ -11,7 +11,7 @@ export default server;
 
 // let ISProd=true;
 // const server =ISProd ?
-//     "https://videocallbackend-8mrh.onrender.com"
+//     "https://meetconnect-app-backend.onrender.com"
 //     :
 //     "http://localhost:8000";
 
