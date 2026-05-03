@@ -36,7 +36,7 @@ app.get ("/home",(req,res)=>{
 const start = async()=>{
     app.set("mongo_user")
     /// database connection setting
-    const connectionDb =await mongoose.connect("mongodb+srv://ashleshaZoom:ashleshaZoom123@zoomclonecluster.u42a7.mongodb.net/?retryWrites=true&w=majority&appName=ZoomCloneCluster");
+    const connectionDb =await mongoose.connect(process.env.MONGO_URI);
     console.log(`mongo connected DB host:${connectionDb.connection.host}`)
 
     server.listen(app.get("port"),()=>{
