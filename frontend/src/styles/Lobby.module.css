@@ -1,0 +1,127 @@
+.container {
+  height: 100vh;
+  background: #0f172a;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #94a3b8;
+}
+
+/* VIDEO BOX */
+.videoBox {
+  width: 600px;
+  height: 360px;
+
+  background: #1e293b;
+  border-radius: 15px;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* VIDEO */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CAMERA OFF */
+.camOff {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+/* CONTROLS */
+.controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTONS */
+.btn {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255,255,255,0.9);
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* ICON SIZE */
+.btn svg {
+  font-size: 22px;
+}
+
+/* NAME */
+.name {
+  margin-top: 15px;
+}
+
+/* JOIN BUTTON */
+.joinBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+
+  background: #2563eb;
+  border: none;
+  color: white;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.joinBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* TEXT */
+.text {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 13px;
+}

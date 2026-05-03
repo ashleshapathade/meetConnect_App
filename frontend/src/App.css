@@ -1,0 +1,117 @@
+.LandingPageContainer{
+    width:100vw;
+    height: 100vh;
+    background:url("/public/background.png") ;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    color: white;
+}
+
+.LandingPageContainer nav{
+    padding-inline: 1.2rem;
+    padding-block: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LandingPageContainer nav h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+
+}
+.LandingPageContainer nav .navList{
+    display:flex;
+    gap:1.8rem;
+    cursor: pointer;
+
+}
+/* for button */
+div[role='button'] {
+    display: inline-block;
+    padding: 0px 20px 5px 20px;
+    
+    background-color:#ff9839; 
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+div[role='button']:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+div[role='button']:active {
+    background-color: #004093; /* Even darker on click */
+}
+
+div[role='button'] p {
+    margin: 0; /* Remove default margin from <p> */
+}
+
+.LandingMainContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    height: 80vh;
+    align-items: center;
+
+}
+.LandingMainContainer > div:nth-child(1){
+    font-size: 2.0rem;
+
+}
+.LandingMainContainer > div:nth-child(1) div[role='button']{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+
+}
+
+
+
+.LandingMainContainer > div:nth-child(2) img{
+    height: 70vh;
+    width: auto;
+    
+}
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    margin-top: 20px;
+}
+
+.meetContainer{
+    display: flex;
+    padding-inline: 20px;
+    height: 80vh;
+    justify-content: center;
+    gap:10vw;
+}
+
+.leftPanel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+  
+.rightPanel {
+    display: flex;
+    align-items: center;
+}
+  
+.rightPanel > img {
+    width: 30vw;
+    height: auto;
+    border-radius: 20px;
+}
+
