@@ -4,6 +4,11 @@ dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import {createServer} from "node:http";   /// Creates an HTTP server
 import { Server } from "socket.io";       // Used for real-time communication with WebSockets 
@@ -32,6 +37,14 @@ app.set("port",process.env.PORT || 8000);
 app.get ("/home",(req,res)=>{
     res.send("hello world")
 })
+
+// Serve static frontend files
+app.use(express.static(path.resolve(__dirname, "../../frontend/build")));
+
+// Catch-all route to serve index.html for any unknown route
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../../frontend/build", "index.html"));
+});
 
 const start = async()=>{
     app.set("mongo_user")
