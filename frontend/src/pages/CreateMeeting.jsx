@@ -22,7 +22,7 @@ export default function CreateMeeting() {
     Math.random().toString(36).substring(2, 10),
   );
 
-  const meetingLink = `http://localhost:3000/meeting/${meetingId}`;
+  const meetingLink = `${window.location.origin}/meeting/${meetingId}`;
 
   // ✅ REQUEST PERMISSION (USER CLICK BASED)
   const requestPermissions = async () => {

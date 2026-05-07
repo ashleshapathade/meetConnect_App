@@ -34,7 +34,7 @@ router.post("/create", async (req, res) => {
       meetingCode,
       user_id: user_id || null,
       hostName: finalHostName,
-      link: `http://localhost:3000/meeting/${meetingCode}`,
+      link: `${process.env.FRONTEND_URL || "http://localhost:3000"}/meeting/${meetingCode}`,
     });
 
     console.log("MEETING CREATED:", meeting);
@@ -58,7 +58,7 @@ router.get("/:id", async (req, res) => {
       meetingCode: meeting.meetingCode,
       host: meeting.hostName, // ✅ now real name
       hostUserId: meeting.user_id,
-      link: `http://localhost:3000/meeting/${meeting.meetingCode}`,
+      link: `${process.env.FRONTEND_URL || "http://localhost:3000"}/meeting/${meeting.meetingCode}`,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });

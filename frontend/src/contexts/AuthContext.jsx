@@ -90,7 +90,7 @@ export const AuthProvider = ({ children }) => {
     try {
       let request = await client.get("/get_all_activity", {
         params: {
-          token: localStorage.getItem("token"),
+          token: localStorage.getItem("token") || sessionStorage.getItem("token"),
         },
       });
       return request.data;
@@ -102,7 +102,7 @@ export const AuthProvider = ({ children }) => {
   const addToUserHistory = async (meetingCode) => {
     try {
       let request = await client.post("/add_to_activity", {
-        token: localStorage.getItem("token"),
+        token: localStorage.getItem("token") || sessionStorage.getItem("token"),
         meeting_code: meetingCode,
       });
       return request.data;
