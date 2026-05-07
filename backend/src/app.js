@@ -38,13 +38,7 @@ app.get ("/home",(req,res)=>{
     res.send("hello world")
 })
 
-// Serve static frontend files
-app.use(express.static(path.resolve(__dirname, "../../frontend/build")));
 
-// Catch-all route to serve index.html for any unknown route
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../../frontend/build", "index.html"));
-});
 
 const start = async()=>{
     app.set("mongo_user")
